@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The Wall — an anonymous place to leave thoughts.">
+<title>The Wall — Anonymous thoughts</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<header class="hero-wrap">
+<nav class="nav wrap"><a class="brand" href="#">the wall<span>.</span></a><div><a href="#wall">The wall</a><a href="#about">About</a></div></nav>
+<section class="hero wrap">
+<p class="eyebrow">ANONYMOUS · NO ACCOUNT · JUST WORDS</p>
+<h1>Say what you<br><em>can't say.</em></h1>
+<p class="intro">A quiet corner of the internet for the thoughts you keep to yourself. Leave them here without a name.</p>
+<a class="cta" href="#write">Leave something <span>↓</span></a>
+</section>
+</header>
+
+<main>
+<section class="write wrap" id="write">
+<p class="kicker">01 / LEAVE IT HERE</p>
+<form id="post-form" class="composer">
+<textarea id="message" maxlength="500" required placeholder="I've never told anyone this..."></textarea>
+<div class="counter"><span id="counter">0</span> / 500</div>
+<div class="composer-bottom">
+<div><p class="label">What kind of thought is this?</p>
+<div class="chips">
+<button type="button" class="chip active" data-category="Thought">Thought</button>
+<button type="button" class="chip" data-category="Secret">Secret</button>
+<button type="button" class="chip" data-category="Rant">Rant</button>
+<button type="button" class="chip" data-category="Regret">Regret</button>
+<button type="button" class="chip" data-category="Good">Something good</button>
+</div></div>
+<button class="submit" type="submit">Leave anonymously <span>↗</span></button>
+</div>
+</form>
+<p class="note">Don't include names, phone numbers, addresses or other private information.</p>
+</section>
+
+<section class="wall wrap" id="wall">
+<div class="wall-heading"><div><p class="kicker">02 / THE WALL</p><h2>Things people<br><em>left behind.</em></h2></div>
+<select id="filter"><option value="All">All thoughts</option><option value="Thought">Thoughts</option><option value="Secret">Secrets</option><option value="Rant">Rants</option><option value="Regret">Regrets</option><option value="Good">Something good</option></select></div>
+<div id="feed" class="feed"></div>
+</section>
+
+<section class="about wrap" id="about">
+<p class="kicker">03 / THE IDEA</p>
+<div class="about-grid"><h2>Some things<br>are easier to <em>leave</em><br>than to say.</h2>
+<div><p>The Wall is built around one simple idea: you shouldn't need a profile to say something honest.</p><p>This version is a front-end prototype. Posts are stored in this browser. The next step is connecting the interface to Supabase so posts, likes and reports become genuinely public.</p></div></div>
+</section>
+</main>
+<footer class="wrap"><span>THE WALL</span><span>NO NAMES. JUST WORDS.</span></footer>
+<div id="toast" class="toast" role="status"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
